@@ -18,6 +18,7 @@ class NodejsInstallerConan(ConanFile):
     exports_sources = "nodejs.patch"
     settings = "os_build", "arch_build"
     _build_subfolder = "build_subfolder"
+    short_paths = True
 
     def configure(self):
         if self.settings.arch_build == "x86" and self.settings.os_build == "Linux":
